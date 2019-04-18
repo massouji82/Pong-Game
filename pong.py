@@ -52,25 +52,25 @@ pen.write('Player A: 0  Player B: 0', align='center', font=('Courier', 24, 'norm
 def paddle_a_up():
 	if paddle_a.ycor() < 250:
 		y = paddle_a.ycor()
-		y += 20
+		y += 30
 		paddle_a.sety(y)
 
 def paddle_a_down():
 	if paddle_a.ycor() > -240:
 		y = paddle_a.ycor()
-		y -= 20
+		y -= 30
 		paddle_a.sety(y)
 
 def paddle_b_up():
 	if paddle_b.ycor() < 250:
 		y = paddle_b.ycor()
-		y += 20
+		y += 30
 		paddle_b.sety(y)
 
 def paddle_b_down():
 	if paddle_b.ycor() > -240:
 		y = paddle_b.ycor()
-		y -= 20
+		y -= 30
 		paddle_b.sety(y)
 
 #Keyboard binding
@@ -92,12 +92,12 @@ while True:
 	if ball.ycor() > 290:
 		ball.sety(290)
 		ball.dy *= -1
-		os.system('afplay Beep2.wav&')
+		os.system('afplay Beep1.wav&')
 
 	if ball.ycor() < -290:
 		ball.sety(-290)
 		ball.dy *= -1
-		os.system('afplay Beep2.wav&')
+		os.system('afplay Beep1.wav&')
 
 	if ball.xcor() > 390:
 		ball.goto(0, 0)
@@ -117,12 +117,12 @@ while True:
 	if (ball.xcor() > 340 and ball.xcor() < 350) and (ball.ycor() < paddle_b.ycor() + 40 and ball.ycor() > paddle_b.ycor() - 40):
 		ball.setx(340)
 		ball.dx *= -1
-		os.system('afplay Beep1.wav&')
+		os.system('afplay Beep.wav&')
 
 
 	if (ball.xcor() < -340 and ball.xcor() > -350) and (ball.ycor() < paddle_a.ycor() + 40 and ball.ycor() > paddle_a.ycor() - 40):
 		ball.setx(-340)
 		ball.dx *= -1
-		os.system('afplay Beep1.wav&')
+		os.system('afplay Beep.wav&')
 
 
