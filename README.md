@@ -1,1 +1,1 @@
-A version of Pong made with Python's turtle module
+A version of Pong made with Python's turtle module. Based on Christian Thompson's YT tutorials with some tweaks.
